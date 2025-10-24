@@ -17,7 +17,7 @@ public class EJ3 {
 
         }
             else {
-            System.out.println("es un caracter especial")/;
+            System.out.println("es un caracter especial");
         }
 
 
