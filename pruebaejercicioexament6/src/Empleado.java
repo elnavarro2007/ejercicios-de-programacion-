@@ -59,8 +59,8 @@ public class Empleado {
         this.puesto = puesto;
     }
 
-    public void trabajar() {
-        System.out.println("estoy trabajando como " + puesto);
+    public String trabajar() {
+        return "Trabajando como " +puesto;
     }
 
     public String toString() {

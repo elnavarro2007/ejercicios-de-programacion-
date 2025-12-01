@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Empresa {
@@ -29,7 +30,7 @@ public class Empresa {
     }
     public LocalDate antiguedad (){
         for (Empleado e: empleados){
-            
+            Arrays.sort();
         }
 
 
