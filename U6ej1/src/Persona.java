@@ -1,0 +1,87 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Locale;
+
+public class Persona {
+
+    private String nombre;
+    private String apellidos;
+    private LocalDate fechaDeNacimiento;
+    private String dni;
+    private Character sexo;
+
+
+
+    public void Persona(String nombre, String apellidos, LocalDate fechaDeNacimiento, String dni, Character sexo) {
+        this.nombre=nombre;
+        this.apellidos=apellidos;
+        this.fechaDeNacimiento=fechaDeNacimiento;
+        this.dni=dni;
+        this.sexo=sexo;
+
+
+    }
+
+    public String getNombre() {
+
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+
+        this.apellidos = apellidos;
+    }
+
+    public LocalDate getFechaDeNacimiento() {
+
+        return fechaDeNacimiento;
+    }
+
+    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
+
+        this.fechaDeNacimiento = fechaDeNacimiento;
+    }
+
+    public String getDni() {
+
+        return dni;
+    }
+
+    public void setDni(String dni) {
+
+        this.dni = dni;
+    }
+
+    public Character getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Character sexo) {
+
+        this.sexo = sexo;
+    }
+    public String nomnbre (){
+
+        return "Hola soy "+nombre;
+    }
+    @Override
+    public String toString(){
+        return "nombre "+nombre+
+                " apellidos "+apellidos+
+                " fechanacimiento "+fechaDeNacimiento+
+                " DNI "+dni+
+                " Sexo "+sexo;
+    }
+    public Integer tiempo (){
+        return Period.between(fechaDeNacimiento,LocalDate.now()).getYears();
+    }
+}
