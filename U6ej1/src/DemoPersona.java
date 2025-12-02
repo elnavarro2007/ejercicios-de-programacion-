@@ -1,7 +1,10 @@
+import java.time.LocalDate;
+
 public class DemoPersona {
     public static void main (String[] args){
         Persona p1 = new Persona();
-        Persona p2 = new Persona("Alonso","soriano",2025-2-2,"12345",'M');
-        System.out.println(p1.toString());
+        LocalDate fechap2 = LocalDate.of(2000,02,12);
+        Persona p2 = new Persona("Alonso","soriano", fechap2,"12345","M");
+        System.out.println(p2.toString());
     }
 }

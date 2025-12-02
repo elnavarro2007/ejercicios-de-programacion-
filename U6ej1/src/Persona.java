@@ -8,11 +8,11 @@ public class Persona {
     private String apellidos;
     private LocalDate fechaDeNacimiento;
     private String dni;
-    private Character sexo;
+    private String sexo;
 
 
 
-    public void Persona(String nombre, String apellidos, LocalDate fechaDeNacimiento, String dni, Character sexo) {
+    public Persona(String nombre, String apellidos, LocalDate fechaDeNacimiento, String dni, String sexo) {
         this.nombre=nombre;
         this.apellidos=apellidos;
         this.fechaDeNacimiento=fechaDeNacimiento;
@@ -20,6 +20,9 @@ public class Persona {
         this.sexo=sexo;
 
 
+    }
+
+    public Persona() {
     }
 
     public String getNombre() {
@@ -61,11 +64,11 @@ public class Persona {
         this.dni = dni;
     }
 
-    public Character getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(Character sexo) {
+    public void setSexo(String sexo) {
 
         this.sexo = sexo;
     }
