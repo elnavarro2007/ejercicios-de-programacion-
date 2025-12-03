@@ -3,12 +3,28 @@ import java.time.Period;
 
 public class Empleado {
 
-    String nombre;
-    String apellido;
-    LocalDate fechaDeContratacion;
-    String DNI;
-    Double salario;
-    String puesto;
+   private String nombre;
+   private String apellido;
+   private LocalDate fechaContratacion;
+   private String dni;
+   private Double salario;
+   private String puesto;
+
+    public Empleado() {
+    }
+
+    public Empleado(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Empleado(String nombre, String apellido, LocalDate fechaContratacion, String dni, Double salario, String puesto) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaContratacion = fechaContratacion;
+        this.dni = dni;
+        this.salario = salario;
+        this.puesto = puesto;
+    }
 
     public String getNombre() {
         return nombre;
@@ -28,7 +44,7 @@ public class Empleado {
     }
 
     public LocalDate getFechaDeContratacion() {
-        return fechaDeContratacion;
+        return fechaContratacion;
     }
 
     public void setFechaDeContratacion(LocalDate fechaDeContratacion) {
@@ -36,11 +52,11 @@ public class Empleado {
     }
 
     public String getDNI() {
-        return DNI;
+        return dni;
     }
 
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
+    public void setDNI(String dni) {
+        this.dni = dni;
     }
 
     public Double getSalario() {
@@ -66,17 +82,21 @@ public class Empleado {
     public String toString() {
         return "Nombre :" + nombre +
                 "apellido :" + apellido +
-                "Fecha contratacion :" + fechaDeContratacion +
-                "DNI :" + DNI +
+                "Fecha contratacion :" + fechaContratacion +
+                "DNI :" + dni +
                 "Salario :" + salario +
                 "Puesto :" + puesto;
 
 
     }
 
-    public Integer antiguedad() {
-
-        return Period.between(fechaDeContratacion,LocalDate.now()).getDays();
+    public Integer getAntiguedad() {
+        if (fechaContratacion==null){
+            return 0;
+        }else {
+            return Period.between(fechaContratacion, LocalDate.now()).getDays();
+        }
     }
+
 }
 
