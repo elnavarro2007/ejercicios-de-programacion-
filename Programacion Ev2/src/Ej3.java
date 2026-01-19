@@ -8,7 +8,7 @@ import java.nio.file.StandardCopyOption;
 public class Ej3 {
     public static void main(String[] args) {
         // ponemos el directorio original
-        String basedir = "C:\\Users\\dam1\\Documents\\PRO_UD08_Ej03";
+        String basedir = "C:\\Users\\usuario\\Documents";
 
         // añadimos el documento que esta en la carpeta
         String originalFilePath = basedir + "\\Programacion.txt";

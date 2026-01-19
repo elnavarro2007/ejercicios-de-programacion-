@@ -2,6 +2,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.Scanner;
 
+
 public class Ej2 {
     static void main() {
         Scanner sc = new Scanner(System.in);
