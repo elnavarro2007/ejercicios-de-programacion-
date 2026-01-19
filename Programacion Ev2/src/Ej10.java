@@ -4,15 +4,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Ej10 {
-    static void main(String[] args) {
-        String path = "C:\\Users\\usuario\\Desktop\\ejercicios programacion\\Programacion Ev2\\DATA.csv";
+    public static void main(String[] args) {
+        String path = "DATA.csv";
 
-        String registros = "(ES|PT)";
+        String registros = ".*,(ES|PT),.*";
         String email = ".*,\\w+@\\w+.edu,.*";
-        String yahoo = ".*,\\w+@yahoo\\w,.*";
+        String yahoo = ".*@yahoo\\..*";
 
         Pattern patternRegistros = Pattern.compile(registros);
-        Matcher matcherRegistro = patternRegistros.matcher(path);
+
         Pattern patternEmail = Pattern.compile(email);
         Matcher matcherEmail = patternEmail.matcher(path);
         Pattern patternYahoo = Pattern.compile(yahoo);
@@ -20,17 +20,21 @@ public class Ej10 {
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String linea;
-
             while ((linea = br.readLine()) != null) {
-                if (patternRegistros.matcher(linea).matches()) {
-                    System.out.println("España y portugal "+ linea);
+               if (patternRegistros.matcher(linea).matches()) {
+                    System.out.println("España y Portugal ---------> "+ linea);
                 }
+
                 if (patternEmail.matcher(linea).matches()) {
-                    System.out.println(".Edu " +linea);
+                    System.out.println(".Edu ---------> " +linea);
                 }
+
+
+
                 if (patternYahoo.matcher(linea).matches()) {
-                    System.out.println(" Yahoo  " +linea);
+                    System.out.println(" Yahoo ---------> " + linea);
                 }
+
 
             }
 
